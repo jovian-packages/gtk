@@ -1,0 +1,13 @@
+/vendor/
+/.phpunit.cache/
+/.phpunit.result.cache
+/phpunit.xml.bak
+/.idea/
+/.vscode/
+*.swp
+.DS_Store
+.unlazy-hook-state.json
+.unlazy/locks/
+.unlazy/**/dispatch.json
+.unlazy/**/hook-state.json
+.unlazy/**/*.lock
