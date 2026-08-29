@@ -1,0 +1,136 @@
+{
+    "name": "jovian/gtk",
+    "description": "GTK4 Bindings for The PHP GTK Extension",
+    "type": "library",
+    "version": "0.8.0",
+    "keywords": [
+        "framework",
+        "venusian",
+        "scrapyard-io",
+        "gtk",
+        "bindings",
+        "linux"
+    ],
+    "license": "MIT",
+    "homepage": "https://venusian.projectsaturnstudios.com/ecosystem/jovian/gtk/0.8.x/overview",
+    "support": {
+        "docs": "https://venusian.projectsaturnstudios.com/ecosystem/jovian/gtk/0.8.x/overview",
+        "issues": "https://github.com/venusian-jovian/gtk/issues",
+        "source": "https://github.com/venusian-jovian/gtk"
+    },
+    "authors": [
+        {
+            "name": "Angel Gonzalez",
+            "email": "angel@projectsaturnstudios.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4|^8.5|^8.6",
+        "ext-gtk": "^0.8.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jovian\\Bindings\\Gtk\\": "src/"
+        },
+        "classmap": [
+            "src/Contracts/"
+        ],
+        "files": [
+            "src/Helpers/g-action-map.php",
+            "src/Helpers/g-action.php",
+            "src/Helpers/g-application.php",
+            "src/Helpers/g-list-model.php",
+            "src/Helpers/g-list-store.php",
+            "src/Helpers/g-menu-item.php",
+            "src/Helpers/g-menu-model.php",
+            "src/Helpers/g-menu.php",
+            "src/Helpers/g-simple-action.php",
+            "src/Helpers/gtk-about-dialog.php",
+            "src/Helpers/gtk-actionable.php",
+            "src/Helpers/gtk-adjustment.php",
+            "src/Helpers/gtk-application-window.php",
+            "src/Helpers/gtk-application.php",
+            "src/Helpers/gtk-aspect-frame.php",
+            "src/Helpers/gtk-box.php",
+            "src/Helpers/gtk-button.php",
+            "src/Helpers/gtk-center-box.php",
+            "src/Helpers/gtk-check-button.php",
+            "src/Helpers/gtk-drop-down.php",
+            "src/Helpers/gtk-editable.php",
+            "src/Helpers/gtk-entry-buffer.php",
+            "src/Helpers/gtk-entry.php",
+            "src/Helpers/gtk-expander.php",
+            "src/Helpers/gtk-fixed.php",
+            "src/Helpers/gtk-flow-box-child.php",
+            "src/Helpers/gtk-flow-box.php",
+            "src/Helpers/gtk-frame.php",
+            "src/Helpers/gtk-grid.php",
+            "src/Helpers/gtk-header-bar.php",
+            "src/Helpers/gtk-image.php",
+            "src/Helpers/gtk-label.php",
+            "src/Helpers/gtk-level-bar.php",
+            "src/Helpers/gtk-list-box-row.php",
+            "src/Helpers/gtk-list-box.php",
+            "src/Helpers/gtk-notebook-page.php",
+            "src/Helpers/gtk-notebook.php",
+            "src/Helpers/gtk-orientable.php",
+            "src/Helpers/gtk-overlay.php",
+            "src/Helpers/gtk-paned.php",
+            "src/Helpers/gtk-password-entry.php",
+            "src/Helpers/gtk-picture.php",
+            "src/Helpers/gtk-popover-menu-bar.php",
+            "src/Helpers/gtk-popover-menu.php",
+            "src/Helpers/gtk-popover.php",
+            "src/Helpers/gtk-progress-bar.php",
+            "src/Helpers/gtk-range.php",
+            "src/Helpers/gtk-revealer.php",
+            "src/Helpers/gtk-scale.php",
+            "src/Helpers/gtk-scrollable.php",
+            "src/Helpers/gtk-scrollbar.php",
+            "src/Helpers/gtk-scrolled-window.php",
+            "src/Helpers/gtk-search-entry.php",
+            "src/Helpers/gtk-separator.php",
+            "src/Helpers/gtk-spin-button.php",
+            "src/Helpers/gtk-spinner.php",
+            "src/Helpers/gtk-stack-page.php",
+            "src/Helpers/gtk-stack-sidebar.php",
+            "src/Helpers/gtk-stack-switcher.php",
+            "src/Helpers/gtk-stack.php",
+            "src/Helpers/gtk-string-list.php",
+            "src/Helpers/gtk-string-object.php",
+            "src/Helpers/gtk-switch.php",
+            "src/Helpers/gtk-text-buffer.php",
+            "src/Helpers/gtk-text-mark.php",
+            "src/Helpers/gtk-text-tag-table.php",
+            "src/Helpers/gtk-text-tag.php",
+            "src/Helpers/gtk-text-view.php",
+            "src/Helpers/gtk-text.php",
+            "src/Helpers/gtk-toggle-button.php",
+            "src/Helpers/gtk-viewport.php",
+            "src/Helpers/gtk-widget.php",
+            "src/Helpers/gtk-window-controls.php",
+            "src/Helpers/gtk-window.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeptOfScrapyardRobotics\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.8.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
