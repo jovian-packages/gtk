@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace Jovian\Bindings\Gtk\Gio;
 
 use Gtk\Gio\GActionMap\GActionMap as ExtGActionMap;
+use Jovian\Bindings\Gtk\Contracts\GAction;
 use Jovian\Bindings\Gtk\Runtime\Bridge;
 use Jovian\Bindings\Gtk\Runtime\GObject;
 use Jovian\Bindings\Gtk\Runtime\Registry;

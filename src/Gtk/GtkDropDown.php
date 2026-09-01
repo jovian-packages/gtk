@@ -7,8 +7,8 @@ declare(strict_types=1);
 namespace Jovian\Bindings\Gtk\Gtk;
 
 use Gtk\Gtk\GtkDropDown\GtkDropDown as ExtGtkDropDown;
+use Jovian\Bindings\Gtk\Contracts\GListModel;
 use Jovian\Bindings\Gtk\Enums\GtkStringFilterMatchMode;
-use Jovian\Bindings\Gtk\Gio\GListModel;
 use Jovian\Bindings\Gtk\Runtime\Bridge;
 use Jovian\Bindings\Gtk\Runtime\GObject;
 use Jovian\Bindings\Gtk\Runtime\Registry;

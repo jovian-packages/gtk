@@ -25,7 +25,7 @@ final class Registry
         }
 
         $typeName = Bridge::typeName($handle);
-        $class = TypeMap::resolve(is_string($typeName) ? $typeName : null);
+        $class = TypeMap::resolveWithProbe(is_string($typeName) ? $typeName : null, $handle);
 
         return new $class($handle);
     }
