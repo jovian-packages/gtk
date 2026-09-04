@@ -121,6 +121,11 @@ function gtk_text_buffer_get_tag_table(int $handle): int
     return ExtGtkTextBuffer::getTagTable($handle);
 }
 
+function gtk_text_buffer_get_text(int $handle, int $startOffset, int $endOffset, bool $includeHiddenChars): mixed
+{
+    return ExtGtkTextBuffer::getText($handle, $startOffset, $endOffset, $includeHiddenChars);
+}
+
 function gtk_text_buffer_insert_at_cursor(int $handle, string $text, int $len): void
 {
     ExtGtkTextBuffer::insertAtCursor($handle, $text, $len);

@@ -146,6 +146,11 @@ class GtkTextBuffer extends GObject
         return Registry::box(ExtGtkTextBuffer::getTagTable($this->handle));
     }
 
+    public function getText(int $startOffset, int $endOffset, bool $includeHiddenChars): ?string
+    {
+        return ExtGtkTextBuffer::getText($this->handle, $startOffset, $endOffset, $includeHiddenChars);
+    }
+
     public function insertAtCursor(string $text, int $len): static
     {
         ExtGtkTextBuffer::insertAtCursor($this->handle, $text, $len);

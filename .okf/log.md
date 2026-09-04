@@ -1,5 +1,12 @@
 # Update Log
 
+## 2026-09-04 (text-buffer read-back)
+* **Generation**: ext unreserved `gtk_text_buffer_get_text` (iters cross as
+  int character offsets, -1 = end), so `GtkTextBuffer::getText(startOffset,
+  endOffset, includeHiddenChars): ?string` and the
+  `gtk_text_buffer_get_text` helper are now projected. Proven on the Pi:
+  reflection green, full-buffer and offset-sliced reads both answer.
+
 ## 2026-08-31 (video)
 * **Generation**: `GtkVideo`/`GtkMediaFile`/`GtkMediaStream` DTOs + helpers projected
   with honest parents (`GtkMediaFile extends GtkMediaStream extends GObject`), plus
