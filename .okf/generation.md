@@ -8,7 +8,7 @@ description: >-
 resource: scripts/generate.php
 tags: [generator, gir, annotations]
 status: draft
-generated: { by: cursor-grok-4.6/cursor, at: "2026-08-29T04:10:00Z" }
+generated: { by: cursor-grok-4.6/cursor, at: "2026-09-12T20:10:00Z" }
 sources:
   - id: generate
     resource: scripts/generate.php
@@ -38,13 +38,16 @@ sources:
   `new_()` on the extension. Never call the annotation name verbatim.
 - Constructors return `int` and have no `handle` parameter.
 - `OBTAIN_ONLY`: `GtkSettings`, `GdkDisplay`, `GtkRange`,
-  `GtkNotebookPage`, `GtkStackPage` — no invented constructor.
+  `GtkNotebookPage`, `GtkStackPage` — no invented constructor. GIR
+  `abstract="1"` classes get none either: `GdkGLContext` is obtained
+  from `GtkGLArea::getContext` or its own static `getCurrent`.
 - Unmatched annotations and interface-trait collisions are hard
   failures. Bridge (12 methods) is glue and is skipped, not unmatched.
 
 # Output (committed, never hand-edited)
 
-`src/Gtk/`, `src/Gio/`, `src/Contracts/`, `src/Enums/`, `src/Helpers/`,
+`src/Gtk/`, `src/Gio/`, `src/Gdk/`, `src/Contracts/`, `src/Enums/`,
+`src/Helpers/`,
 `src/Runtime/GeneratedTypeMap.php`, and `composer.json`
 `autoload.files`.[^emit]
 
@@ -55,7 +58,11 @@ Success token: `GEN_OK`.
 Generation is pure PHP and runs on the Mac. The Pi checkout must be
 synced (`src tests examples composer.json phpunit.xml`, never
 `vendor/` or `.unlazy/`) before identity, lifetime, reflection, or
-smoke is trusted.
+smoke is trusted. GIR-backed Pest tests call `gtkExtRoot()` in
+`tests/Pest.php`: Mac sibling `../../php-io-extensions/gtk`, else
+the Pi ext checkout at `/home/angel/gtk`. Override with
+`JOVIAN_GTK_EXT`. Wave C identity smoke:
+`examples/smoke-calendar-table.php`.
 
 [^generate]: Generator entry
 [^emit]: DTO / helper / type-map / autoload emitter

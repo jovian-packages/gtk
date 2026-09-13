@@ -5,7 +5,7 @@ declare(strict_types=1);
 require_once dirname(__DIR__, 2) . '/scripts/lib/ported.php';
 
 it('collects @zep, @reserved, and construction paths from the extension headers', function (): void {
-    $ext = dirname(__DIR__, 2) . '/../../php-io-extensions/gtk';
+    $ext = gtkExtRoot();
 
     $annotations = collectAnnotations($ext);
 

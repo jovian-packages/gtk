@@ -16,8 +16,8 @@ only.
 
 ## Package rules (quick) — 0.8.x
 
-- Composer: `jovian/gtk` **0.8.0**. PHP `^8.4|^8.5|^8.6`. Requires
-  `ext-gtk` `^0.8.0`.
+- Composer: `jovian/gtk` **0.8.1**. PHP `^8.4|^8.5|^8.6`. Requires
+  `ext-gtk` `^0.8.1`.
 - Namespace root is `Jovian\Bindings\Gtk\`.
 - **One ext call = one method.** A DTO method or helper is legitimate
   only if it is exactly one extension call with the same arguments in
@@ -34,8 +34,8 @@ only.
   except `Lifetime::boot()`. Constructing a DTO before boot throws
   `NotBooted`. Forgetting boot on a raw helper is a native crash.
 - **Generated trees are output.** Never hand-edit `src/Gtk/**`,
-  `src/Gio/**`, `src/Contracts/**`, `src/Enums/**`, `src/Helpers/**`, or
-  `src/Runtime/GeneratedTypeMap.php`. Handwritten trees are
+  `src/Gio/**`, `src/Gdk/**`, `src/Contracts/**`, `src/Enums/**`,
+  `src/Helpers/**`, or `src/Runtime/GeneratedTypeMap.php`. Handwritten trees are
   `src/Runtime/` (except `GeneratedTypeMap`) and `src/Values/`.
 - **Generator.** `php scripts/generate.php --ext=../../php-io-extensions/gtk`.
   Ports `collectAnnotations`, `loadGir`, `escapeReserved`, `OBTAIN_ONLY`
@@ -59,5 +59,6 @@ only.
   the Mac. Identity, lifetime, reflection, and smoke run on fnk0107 via
   `fnk '<command>'` (zsh alias; never inline its credentials). Sync
   `src tests examples composer.json phpunit.xml` first — never
-  `vendor/` or `.unlazy/`. Extension-gated Pest tests skip when
-  `extension_loaded('gtk')` is false.
+  `vendor/` or `.unlazy/`. GIR-backed Pest tests resolve the ext
+  checkout through `gtkExtRoot()` (Mac sibling or `/home/angel/gtk`).
+  Extension-gated Pest tests skip when `extension_loaded('gtk')` is false.

@@ -2,7 +2,7 @@
     "name": "jovian/gtk",
     "description": "GTK4 Bindings for The PHP GTK Extension",
     "type": "library",
-    "version": "0.8.0",
+    "version": "0.8.1",
     "keywords": [
         "framework",
         "venusian",
@@ -26,7 +26,7 @@
     ],
     "require": {
         "php": "^8.4|^8.5|^8.6",
-        "ext-gtk": "^0.8.0"
+        "ext-gtk": "^0.8.1"
     },
     "require-dev": {
         "pestphp/pest": "^4"
@@ -49,6 +49,7 @@
             "src/Helpers/g-menu.php",
             "src/Helpers/g-simple-action-group.php",
             "src/Helpers/g-simple-action.php",
+            "src/Helpers/gdk-gl-context.php",
             "src/Helpers/gtk-about-dialog.php",
             "src/Helpers/gtk-actionable.php",
             "src/Helpers/gtk-adjustment.php",
@@ -57,8 +58,11 @@
             "src/Helpers/gtk-aspect-frame.php",
             "src/Helpers/gtk-box.php",
             "src/Helpers/gtk-button.php",
+            "src/Helpers/gtk-calendar.php",
             "src/Helpers/gtk-center-box.php",
             "src/Helpers/gtk-check-button.php",
+            "src/Helpers/gtk-column-view-column.php",
+            "src/Helpers/gtk-column-view.php",
             "src/Helpers/gtk-css-provider.php",
             "src/Helpers/gtk-drop-down.php",
             "src/Helpers/gtk-editable.php",
@@ -69,6 +73,7 @@
             "src/Helpers/gtk-flow-box-child.php",
             "src/Helpers/gtk-flow-box.php",
             "src/Helpers/gtk-frame.php",
+            "src/Helpers/gtk-gl-area.php",
             "src/Helpers/gtk-grid.php",
             "src/Helpers/gtk-header-bar.php",
             "src/Helpers/gtk-image.php",
@@ -76,8 +81,10 @@
             "src/Helpers/gtk-level-bar.php",
             "src/Helpers/gtk-list-box-row.php",
             "src/Helpers/gtk-list-box.php",
+            "src/Helpers/gtk-list-item.php",
             "src/Helpers/gtk-media-file.php",
             "src/Helpers/gtk-media-stream.php",
+            "src/Helpers/gtk-no-selection.php",
             "src/Helpers/gtk-notebook-page.php",
             "src/Helpers/gtk-notebook.php",
             "src/Helpers/gtk-orientable.php",
@@ -96,7 +103,10 @@
             "src/Helpers/gtk-scrollbar.php",
             "src/Helpers/gtk-scrolled-window.php",
             "src/Helpers/gtk-search-entry.php",
+            "src/Helpers/gtk-selection-model.php",
             "src/Helpers/gtk-separator.php",
+            "src/Helpers/gtk-signal-list-item-factory.php",
+            "src/Helpers/gtk-single-selection.php",
             "src/Helpers/gtk-spin-button.php",
             "src/Helpers/gtk-spinner.php",
             "src/Helpers/gtk-stack-page.php",

@@ -3,10 +3,7 @@
 declare(strict_types=1);
 
 it('hard-fails when an annotation has no GIR member and does not skip it', function (): void {
-    $ext = realpath(dirname(__DIR__, 2) . '/../../php-io-extensions/gtk');
-    if ($ext === false) {
-        $ext = dirname(__DIR__, 3) . '/php-io-extensions/gtk';
-    }
+    $ext = gtkExtRoot();
 
     $tmp = sys_get_temp_dir() . '/jovian-gtk-unmatched-' . bin2hex(random_bytes(4));
     mkdir($tmp . '/src', 0755, true);

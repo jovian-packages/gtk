@@ -9,13 +9,6 @@ require_once $package . '/scripts/lib/join.php';
 require_once $package . '/scripts/lib/emit.php';
 require_once $package . '/scripts/lib/enums.php';
 
-function gtkExtRoot(): string
-{
-    $ext = dirname(__DIR__, 2) . '/../../php-io-extensions/gtk';
-
-    return is_dir($ext) ? $ext : dirname(__DIR__, 3) . '/php-io-extensions/gtk';
-}
-
 it('re-reads the vendored GIR and matches every generated enum case value', function (): void {
     $index = indexGirEnums(gtkExtRoot() . '/scripts/gir');
     $files = glob(dirname(__DIR__, 2) . '/src/Enums/*.php') ?: [];

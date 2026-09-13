@@ -38,6 +38,13 @@ exactly those GIR signals.
 `close-request` vetoes the close; `false` lets GTK destroy the
 window.[^smoke] That is why the smoke runs veto then allow.
 
+The same path carries `GtkGLArea::onRender`, whose GIR return is
+`gboolean`: a handler that drew the frame itself returns `true` to stop
+GTK's default handling. Nothing had to be added to the extension's Bridge
+for the GL wave — `phpgtk_zval_to_gvalue` already branches on
+`G_TYPE_BOOLEAN`. `examples/proof_glarea_typed.php` is the worked
+example.
+
 # Connect guard
 
 Unknown signal names fail with `E_WARNING` and return `0`. A

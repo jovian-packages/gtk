@@ -18,6 +18,7 @@ if (!extension_loaded('gtk')) {
 $scanDirs = [
     $root . '/src/Gtk',
     $root . '/src/Gio',
+    $root . '/src/Gdk',
     $root . '/src/Helpers',
     $root . '/src/Contracts',
     $root . '/src/Runtime',
@@ -71,7 +72,9 @@ foreach ($scanDirs as $dir) {
             if (str_contains($file, '/src/Helpers/')) {
                 $helperSites++;
             }
-            if (str_contains($file, '/src/Gtk/') || str_contains($file, '/src/Gio/')) {
+            if (str_contains($file, '/src/Gtk/')
+                || str_contains($file, '/src/Gio/')
+                || str_contains($file, '/src/Gdk/')) {
                 $dtoSites++;
             }
         }

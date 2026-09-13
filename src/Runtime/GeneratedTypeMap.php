@@ -10,6 +10,8 @@ final class GeneratedTypeMap
 {
     public static function install(): void
     {
+        TypeMap::register('GdkGLContext', \Jovian\Bindings\Gtk\Gdk\GdkGLContext::class);
+        TypeMap::lineage('GdkGLContext', ['GdkDrawContext', 'GObject']);
         TypeMap::register('GAction', \Jovian\Bindings\Gtk\Gio\GAction::class);
         TypeMap::register('GActionMap', \Jovian\Bindings\Gtk\Gio\GActionMap::class);
         TypeMap::register('GApplication', \Jovian\Bindings\Gtk\Gio\GApplication::class);
@@ -42,10 +44,16 @@ final class GeneratedTypeMap
         TypeMap::lineage('GtkBox', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkButton', \Jovian\Bindings\Gtk\Gtk\GtkButton::class);
         TypeMap::lineage('GtkButton', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkCalendar', \Jovian\Bindings\Gtk\Gtk\GtkCalendar::class);
+        TypeMap::lineage('GtkCalendar', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkCenterBox', \Jovian\Bindings\Gtk\Gtk\GtkCenterBox::class);
         TypeMap::lineage('GtkCenterBox', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkCheckButton', \Jovian\Bindings\Gtk\Gtk\GtkCheckButton::class);
         TypeMap::lineage('GtkCheckButton', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkColumnView', \Jovian\Bindings\Gtk\Gtk\GtkColumnView::class);
+        TypeMap::lineage('GtkColumnView', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkColumnViewColumn', \Jovian\Bindings\Gtk\Gtk\GtkColumnViewColumn::class);
+        TypeMap::lineage('GtkColumnViewColumn', ['GObject']);
         TypeMap::register('GtkCssProvider', \Jovian\Bindings\Gtk\Gtk\GtkCssProvider::class);
         TypeMap::lineage('GtkCssProvider', ['GObject']);
         TypeMap::register('GtkDropDown', \Jovian\Bindings\Gtk\Gtk\GtkDropDown::class);
@@ -65,6 +73,8 @@ final class GeneratedTypeMap
         TypeMap::lineage('GtkFlowBoxChild', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkFrame', \Jovian\Bindings\Gtk\Gtk\GtkFrame::class);
         TypeMap::lineage('GtkFrame', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkGLArea', \Jovian\Bindings\Gtk\Gtk\GtkGLArea::class);
+        TypeMap::lineage('GtkGLArea', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkGrid', \Jovian\Bindings\Gtk\Gtk\GtkGrid::class);
         TypeMap::lineage('GtkGrid', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkHeaderBar', \Jovian\Bindings\Gtk\Gtk\GtkHeaderBar::class);
@@ -79,10 +89,14 @@ final class GeneratedTypeMap
         TypeMap::lineage('GtkListBox', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkListBoxRow', \Jovian\Bindings\Gtk\Gtk\GtkListBoxRow::class);
         TypeMap::lineage('GtkListBoxRow', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkListItem', \Jovian\Bindings\Gtk\Gtk\GtkListItem::class);
+        TypeMap::lineage('GtkListItem', ['GObject']);
         TypeMap::register('GtkMediaFile', \Jovian\Bindings\Gtk\Gtk\GtkMediaFile::class);
         TypeMap::lineage('GtkMediaFile', ['GtkMediaStream', 'GObject']);
         TypeMap::register('GtkMediaStream', \Jovian\Bindings\Gtk\Gtk\GtkMediaStream::class);
         TypeMap::lineage('GtkMediaStream', ['GObject']);
+        TypeMap::register('GtkNoSelection', \Jovian\Bindings\Gtk\Gtk\GtkNoSelection::class);
+        TypeMap::lineage('GtkNoSelection', ['GObject']);
         TypeMap::register('GtkNotebook', \Jovian\Bindings\Gtk\Gtk\GtkNotebook::class);
         TypeMap::lineage('GtkNotebook', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkNotebookPage', \Jovian\Bindings\Gtk\Gtk\GtkNotebookPage::class);
@@ -117,8 +131,13 @@ final class GeneratedTypeMap
         TypeMap::lineage('GtkScrolledWindow', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkSearchEntry', \Jovian\Bindings\Gtk\Gtk\GtkSearchEntry::class);
         TypeMap::lineage('GtkSearchEntry', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkSelectionModel', \Jovian\Bindings\Gtk\Gtk\GtkSelectionModel::class);
         TypeMap::register('GtkSeparator', \Jovian\Bindings\Gtk\Gtk\GtkSeparator::class);
         TypeMap::lineage('GtkSeparator', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
+        TypeMap::register('GtkSignalListItemFactory', \Jovian\Bindings\Gtk\Gtk\GtkSignalListItemFactory::class);
+        TypeMap::lineage('GtkSignalListItemFactory', ['GtkListItemFactory', 'GObject']);
+        TypeMap::register('GtkSingleSelection', \Jovian\Bindings\Gtk\Gtk\GtkSingleSelection::class);
+        TypeMap::lineage('GtkSingleSelection', ['GObject']);
         TypeMap::register('GtkSpinButton', \Jovian\Bindings\Gtk\Gtk\GtkSpinButton::class);
         TypeMap::lineage('GtkSpinButton', ['GtkWidget', 'GInitiallyUnowned', 'GObject']);
         TypeMap::register('GtkSpinner', \Jovian\Bindings\Gtk\Gtk\GtkSpinner::class);

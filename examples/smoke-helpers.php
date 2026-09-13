@@ -19,9 +19,21 @@ use Jovian\Bindings\Gtk\Runtime\Bridge;
 use Jovian\Bindings\Gtk\Runtime\Lifetime;
 
 $root = dirname(__DIR__);
-$autoload = $root . '/vendor/autoload.php';
-if (!is_file($autoload)) {
-    fwrite(STDERR, "smoke: run composer install first\n");
+
+/*
+ * Standalone checkout (Mac) owns its vendor/; on the Pi this package is
+ * path-linked into surface-dev, which owns the vendor tree. Same
+ * candidate-list idiom as gtkExtRoot() in tests/Pest.php.
+ */
+$autoload = null;
+foreach ([$root . '/vendor/autoload.php', dirname(__DIR__, 3) . '/vendor/autoload.php'] as $candidate) {
+    if (is_file($candidate)) {
+        $autoload = $candidate;
+        break;
+    }
+}
+if (is_null($autoload)) {
+    fwrite(STDERR, "smoke: no autoloader found — run composer install\n");
     exit(1);
 }
 require $autoload;

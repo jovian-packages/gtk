@@ -6,7 +6,7 @@ description: >-
   int-backed enums, and handle DTOs. No composition.
 tags: [orientation, gtk4, jovian]
 status: draft
-generated: { by: cursor-grok-4.6/cursor, at: "2026-08-29T04:10:00Z" }
+generated: { by: cursor-grok-4.6/cursor, at: "2026-09-12T19:40:00Z" }
 sources:
   - id: spec
     resource: docs/superpowers/specs/2026-08-28-jovian-gtk-design.md
@@ -46,8 +46,10 @@ libgtk-4
    are the same extension call.
 4. Connect signals with [`$btn->onClicked(...)`](/signals.md).
 
-See [`examples/smoke-dto.php`](../examples/smoke-dto.php) and
-[`examples/smoke-helpers.php`](../examples/smoke-helpers.php).
+See [`examples/smoke-dto.php`](../examples/smoke-dto.php),
+[`examples/smoke-helpers.php`](../examples/smoke-helpers.php), and
+[`examples/smoke-calendar-table.php`](../examples/smoke-calendar-table.php)
+(Wave C calendar + ColumnView, Registry identity).
 
 # What it is not
 

@@ -36,7 +36,7 @@ it('reports a trait method collision instead of emitting uncompilable code', fun
 });
 
 it('finds no trait collisions among the bound GTK interfaces', function (): void {
-    $ext = dirname(__DIR__, 2) . '/../../php-io-extensions/gtk';
+    $ext = gtkExtRoot();
     $parsed = parseBoundMethods($ext);
     $joined = joinAnnotationsToGir($parsed['methods'], $ext . '/scripts/gir');
 

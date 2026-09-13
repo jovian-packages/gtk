@@ -7,7 +7,7 @@ description: >-
 resource: src/Enums
 tags: [enums, contracts, gir]
 status: draft
-generated: { by: cursor-grok-4.6/cursor, at: "2026-08-29T04:10:00Z" }
+generated: { by: cursor-grok-4.6/cursor, at: "2026-09-12T19:40:00Z" }
 sources:
   - id: enums
     resource: src/Enums
@@ -43,7 +43,8 @@ under `src/Contracts/`. DTOs `implement` the interface and `use` the
 trait.[^contracts]
 
 Current set: `GtkEditable`, `GtkOrientable`, `GtkScrollable`,
-`GtkActionable`, `GAction`, `GActionMap`, `GListModel`.
+`GtkActionable`, `GtkSelectionModel`, `GAction`, `GActionMap`,
+`GListModel`.
 
 `composer.json` lists `src/Contracts/` as a classmap so
 `GtkOrientableMethods` (defined in `GtkOrientable.php`) autoloads.

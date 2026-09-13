@@ -10,7 +10,7 @@ require_once $package . '/scripts/lib/emit.php';
 require_once $package . '/scripts/lib/enums.php';
 
 it('emits a PHP interface plus projected-method trait for every bound GIR interface', function (): void {
-    $ext = dirname(__DIR__, 2) . '/../../php-io-extensions/gtk';
+    $ext = gtkExtRoot();
     $parsed = parseBoundMethods($ext);
     $joined = joinAnnotationsToGir($parsed['methods'], $ext . '/scripts/gir');
 
